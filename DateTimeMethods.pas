@@ -17,7 +17,12 @@ begin
     else
       Result:=28;
 end;
-function LaterInDay(p1, p2: DateTime): DateTime := p1;
+
+function LaterInDay(p1, p2: DateTime): DateTime;
+begin
+  Result:=p1>p2?p1:p2;
+end;
+
 function LaterInYear(p1, p2: DateTime): DateTime := p1;
 function DaysInYear(year: integer): integer := 0;
 function DaysInYearRange(year1, year2: integer): integer := 0;
